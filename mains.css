@@ -66,8 +66,8 @@ body {
 .main {
 	width: 400px;
 	height: 600px;
-	position: absolute;
-	top: 150%;
+	position: relative;
+	top: 350px;
 	left: 50%;
 	background: #5c5859;
 	padding: 0;
