@@ -226,8 +226,8 @@ table {
 	  margin: auto;
 	  font-size: 28px;
 	  position: relative;
-	  left: 0px;
-	  top: 0;
+	  left : 0;
+	  top: 200;
   }
   }
   .titlegame{
