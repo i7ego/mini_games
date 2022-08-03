@@ -225,9 +225,9 @@ table {
 	  color: white;
 	  margin: auto;
 	  font-size: 28px;
-	  position: relative;
-	  left : 0;
-	  top: 200;
+	  position: absolute;
+	  left : 150px;
+	  top: 1300px;
   }
   }
   .titlegame{
