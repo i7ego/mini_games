@@ -18,8 +18,8 @@ h3 {
     position: relative;
 	
     top: 5px;
-    padding: 14px;
-    margin: 17px;
+    padding: 35px;
+    margin: 1px;
     background-color: #7777;
     border: 20px solid #777;
 
@@ -67,7 +67,7 @@ body {
 	width: 400px;
 	height: 600px;
 	position: absolute;
-	top: 140%;
+	top: 150%;
 	left: 50%;
 	background: #5c5859;
 	padding: 0;
