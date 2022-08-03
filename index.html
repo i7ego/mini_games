@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./mains.css"/>
+    <title>Web Games </title>
+    <link rel="icon" type="image/png" href="1511.gif.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="1511.gif.png" sizes="16x16" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/segment7" type="text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <h1 class="dev">
+             مرحبا بكم ، الموقع تحت التطوير 
+        </h1>
+        <h2>
+            احمد حجاج
+        </h2>
+        <h3>لمزيد من الافكار</h3>
+        <div class="box2">
+            <a href="https://twitter.com/ahmed_hagag90?fbclid=IwAR1VgFoHhW7LiIPrylSOJdj30ewlxtKfWj01wjX3sx3WC1Cot1TEBAOJjB8"><img src=".//twitter.png" width="50px" height="50px" class=""></a>
+            <a href="https://t.co/HptsrkL8k4?amp=1""><img src="./telegram.png" width="50px" height="50px" class=""></a>
+            <a href="https://www.facebook.com/ahmed.hagag.9638/"><img src="./facebook.png" width="50px" height="50px" class=""></a>
+           </div> 
+    <div class="home">
+        <div class="zaka">
+        <h1>أحسب نسبه زكاتك</h1>
+        <input type="text" id="zak" placeholder="ادخل المبلغ هنا">
+       <button onclick="monyZak1()">submit</button>
+        <div id="res3"></div>
+         </div>
+         <hr>
+    <div class="age" >
+        <div class="label">احسب عمرك بالايام</div>
+    	<input type="text" id="age" placeholder="إدخل عمرك هنا  " >
+        <button onclick="ageByDay()">Sumbit</button>
+        <div id="result"></div>
+    </div>
+    <hr>
+    <div class="age" >
+        <div class="label">احسب عمرك بالساعه</div>
+    	<input type="text" id="age1" placeholder="إدخل عمرك هنا  ">
+        <button onclick="ageByHour()">Sumbit</button>
+        <div id="result2"></div>
+    </div>
+</div>
+<!--calc-->
+<div class="main">
+    <form name="form">
+        <input class="textview" name="textview" placeholder="0" style="overflow: scroll;" disabled>
+    </form>
+    <table>
+        <tr>
+            <td>
+                <div class="button" id="clean" onclick="clean()"><div class="inner">C</div>
+                </div>
+            </td>
+            <td>
+                <div class="button none" onclick="back()"><div class="inner"><img alt="←" id="img" src="https://www.dropbox.com/s/2jmv326a6rdvijq/Clear.png?raw=1"></div>
+                </div>
+            </td>
+            <td>
+                <div class="button none" onclick="opt('/')"><div class="inner">÷</div>
+                </div>
+            </td>
+            <td>
+                <div class="button none" onclick="opt('*')"><div class="inner">×</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="button none" onclick="insert(7)"><div class="inner">7</div>
+                </div>
+            </td>
+            <td>
+                <div class="button none" onclick="insert(8)"><div class="inner">8</div>
+                </div>
+            </td>
+            <td>
+                <div class="button none" onclick="insert(9)"><div class="inner">9</div>
+                </div>
+            </td>
+            <td>
+                <div class="button none" onclick="insert('-')"><div class="inner">-</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="button none" onclick="insert(4)"><div class="inner">4</div>
+                </div>
+            </td>
+            <td>
+                <div class="button none" onclick="insert(5)"><div class="inner">5</div>
+                </div>
+            </td>
+            <td>
+                <div class="button none" onclick="insert(6)"><div class="inner">6</div>
+                </div>
+            </td>
+            <td rowspan="2" id="plus">
+                <div id="first" class="button none" onclick="opt('+')"><div class="inner">+</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="button none" onclick="insert(1)"><div class="inner">1</div>
+                </div>
+            </td>
+            <td>
+                <div class="button none" onclick="insert(2)"><div class="inner">2</div>
+                </div>
+            </td>
+            <td>
+                <div class="button none" onclick="insert(3)"><div class="inner">3</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="zero" class="button none" onclick="zero()"><div class="inner">0</div>
+                </div>
+            </td>
+            <td>
+                <div class="button none" onclick="insert('.')"><div class="inner">.</div>
+                </div>
+            </td>
+            <td colspan="2" id="equal">
+                <div id="second" class="button none" onclick="equal()"><div class="inner">=</div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div> 
+  <!--Start Game-->
+  <section id="game" class="game">
+    <div class="container">
+      <div class="game1">
+
+        <div class="titlegame"><span>X O</span> GAME</div>
+
+        <div class="square" id="item1" onclick="game(this.id)"></div>
+        <div class="square" id="item2" onclick="game(this.id)"></div>
+        <div class="square" id="item3" onclick="game(this.id)"></div>
+
+        <div class="square" id="item4" onclick="game(this.id)"></div>
+        <div class="square" id="item5" onclick="game(this.id)"></div>
+        <div class="square" id="item6" onclick="game(this.id)"></div>
+
+        <div class="square" id="item7" onclick="game(this.id)"></div>
+        <div class="square" id="item8" onclick="game(this.id)"></div>
+        <div class="square" id="item9" onclick="game(this.id)"></div>
+      </div>
+    </div>
+  </section>
+  <!--End game-->
+<script src= "main.js"></script>
+	
+</body>
+
+</html>
